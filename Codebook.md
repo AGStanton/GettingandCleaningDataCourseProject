@@ -2,17 +2,54 @@
 Getting and Cleaning Data
 Coursera Data Science Specialization
 Course Project
-README
+Codebook
 ==================================================================
-To run the R script for the Course Project, please download  and source in or copy and paste the R code
-from the file named "run_analysis.R" in the git repo.
+In the final output of the R script, there are 180 rows and 88 variables.
 
-No input is required in the R script, and the output is the table below. There is only one script.
-
-Please make sure that you have the UCI HAR Dataset files both unzipped and in your working directory.
-
+2 of these variables are special in that they were not in the original 
+data set. There are:
 	
+	"activityType" : whether the individual was 
+		1 : WALKING
+		2 : WALKING_UPSTAIRS
+		3 : WALKING_DOWNSTAIRS
+		4 : SITTING
+		5 : STANDING
+		6 : LAYING
+		
+	and "subjectID" : the ID of the individual the measurements were recorded from
+==================================================================
+Each other variable name is comprised of various components, which when combined
+fully describe what the variable is. Below, each of these components
+will be explained so that one may correctly interpret any of the variable names.
 
+t : in the time domain
+f : in the frequency domain
+Body : with relation to the body of the individual
+Gravity : with relation to the force of gravity
+Acc : acceleration
+Jerk : the time derivative of acceleration
+Gyro : with relation to the gyroscope
+Mag : magnitude
+mean: Mean value
+std: Standard deviation
+mad: Median absolute deviation 
+max: Largest value in array
+min: Smallest value in array
+sma: Signal magnitude area
+energy: Energy measure. Sum of the squares divided by the number of values. 
+iqr: Interquartile range 
+entropy: Signal entropy
+arCoeff: Autorregresion coefficients with Burg order equal to 4
+correlation: correlation coefficient between two signals
+maxInds: index of the frequency component with largest magnitude
+meanFreq: Weighted average of the frequency components to obtain a mean frequency
+skewness: skewness of the frequency domain signal 
+kurtosis: kurtosis of the frequency domain signal 
+bandsEnergy: Energy of a frequency interval within the 64 bins of the FFT of each window.
+angle: Angle between to vectors.
+
+==================================================================
 Here is a snippet from the outputted table of step 5, showing 10 rows and 9 columns of a data table containing 180 rows and 88 columns:
 
    activityType subjectID tBodyAccMeanX tBodyAccMeanY tBodyAccMeanZ tBodyAccStdX tBodyAccStdY tBodyAccStdZ tGravityAccMeanX
@@ -40,5 +77,3 @@ such as parentheses and dashes.
 
 Formatting the data in this way makes it much more understandable, 
 and future analysis would be considerably easier.
-
-Please see the accompanying code book for explanations of what the variables mean.
